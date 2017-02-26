@@ -27,3 +27,14 @@
   <li><b> swissPairings() </b></li>
   <p> This function generates and returns a list of pairings according to the Swiss system. This function use playerStandings() to find the ranking of players. </p>
 </ul>
+
+<h2> Instructions </h2>
+<ul type = "disc">
+  <li><b> Set Up Databse </b>
+    <p> Set up database using following command: </p>
+    <pre> $ psql -f tournament.sql</pre>
+  </li>
+  <li><b> Run Module </b>
+    <pre>$ python tournament_test.py </pre>
+  </li>
+</ul>
