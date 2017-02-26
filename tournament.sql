@@ -9,10 +9,6 @@
 -- Drop existing database
 DROP DATABASE IF EXISTS tournament;
 
--- Drop existing tables
-DROP TABLE IF EXISTS players;
-DROP TABLE IF EXISTS matches;
-
 -- Create Database
 CREATE DATABASE tournament;
 
@@ -24,8 +20,8 @@ CREATE TABLE players ( id serial primary key, name text );
 -- Create matches tables
 CREATE TABLE matches (
     id serial primary key,
-    winner integer REFERENCES players,
-    loser integer REFERENCES players
+    winner INTEGER REFERENCES players(id),
+    loser INTEGER REFERENCES players(id)
 );
 
 CREATE VIEW standings AS SELECT players.id, players.name,
